@@ -48,8 +48,8 @@ module.exports = (_, argv) => {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Login":"../src/Components/Login.jsx",
-        "./SignUp":"../src/Components/SignUp.jsx"
+        "./Login":"./src/Components/Login.jsx",
+        "./SignUp":"./src/Components/SignUp.jsx"
       },
       shared: {
         ...deps,
