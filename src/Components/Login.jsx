@@ -12,7 +12,7 @@ const Login = () => {
       ?
       <Loader/>
       :
-    <div className="block w-96 rounded-lg bg-white px-6 shadow-lg dark:bg-neutral-700 py-10">
+    <div className="m-auto block w-96 rounded-lg bg-white px-6 shadow-lg dark:bg-neutral-700 py-10">
      <div className="5/6 flex flex-col items-center gap-4">
         <h3 className="text-2xl text-center font-semibold text-gray-800">Welcome! Enter your email and password to continue</h3>
         <ul className="bg-red-500 px-3 py-2 w-3/4 rounded-lg flex flex-col items-center mb-2 gap-1">
