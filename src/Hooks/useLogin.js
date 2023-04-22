@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useForm} from 'react-hook-form';
+import {useNavigate} from 'react-router-dom';
 import axios from "axios"
 
 const useLogin = () => {
@@ -7,6 +8,9 @@ const useLogin = () => {
     const [ErrorLogin, setErrorLogin] = useState(false)
     const [notCredential, setNotCredential] = useState(false);
     const [load, setload] = useState(false)
+
+    const navigate =useNavigate()
+    
     const submit = datos =>{
         setload(true)
         const url ="https://e-commerce-api-v2.academlo.tech/api/v1/users/login"
@@ -14,6 +18,7 @@ const useLogin = () => {
         .then(({data})=>{
             localStorage.setItem("token",data.token)
             localStorage.setItem("dataUser",JSON.stringify(data.user))
+            navigate('/')
         })
         .catch(err=>{
             if(err.response.status==401){
