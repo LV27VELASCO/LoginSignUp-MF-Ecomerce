@@ -1,12 +1,13 @@
 import React from 'react'
 import useLogin from '../Hooks/useLogin'
 import '../styles/login.css'
+import '../styles/height.css'
 import { NavLink } from 'react-router-dom'
 import Loader from './Loader'
 const Login = () => {
      const {submit,ErrorLogin,register,handleSubmit,errors,notCredential,load} = useLogin()
   return (
-    <>
+    <div className="conten-height flex flex-col justify-center items-center">
     {
       load
       ?
@@ -61,7 +62,7 @@ const Login = () => {
      <p className="text-sm text-gray-700">Already have an account? <NavLink className="text-blue-600 font-semibold" to={'/signUp'}>Sign Up</NavLink></p>
     </div>
 }
-    </>
+    </div>
   )
 }
 

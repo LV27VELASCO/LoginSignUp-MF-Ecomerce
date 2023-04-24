@@ -3,11 +3,12 @@ import useSignUp from '../Hooks/useSignUp'
 import Loader from './Loader'
 import Created from './Created'
 import { NavLink } from 'react-router-dom'
+import '../styles/height.css'
 
 const SignUp = () => {
  const {submit,handleSubmit,register,errors,userCreate,Error,userExist,load} =useSignUp()
   return (
-    <>
+    <div className="conten-height flex flex-col justify-center items-center">
     {
       load
       ?
@@ -131,7 +132,7 @@ const SignUp = () => {
      </form>
     </div>
     }
-    </>
+    </div>
   )
 }
 
