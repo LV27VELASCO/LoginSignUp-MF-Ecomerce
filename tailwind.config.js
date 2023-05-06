@@ -2,7 +2,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        'w-80': '355px',
+      },
+      screens: {
+        'xs': '300px'
+      }
+    },
   },
   variants: {
     extend: {},

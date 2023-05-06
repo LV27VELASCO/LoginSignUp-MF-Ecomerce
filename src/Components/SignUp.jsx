@@ -18,7 +18,7 @@ const SignUp = () => {
       ?
       <Created/>
       :
-    <div className="m-auto block w-96 rounded-lg bg-white px-6 shadow-lg dark:bg-neutral-700 py-8">
+    <div className="m-auto block w-80 rounded-lg bg-white px-6 shadow-lg dark:bg-neutral-700 py-8 md:w-96">
      <div className="w-5/6 m-auto flex justify-start gap-4 mb-5">
         <h3 className="text-2xl text-justify font-semibold text-gray-800">Sign Up</h3>
      </div>
