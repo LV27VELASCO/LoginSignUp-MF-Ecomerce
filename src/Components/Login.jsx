@@ -4,8 +4,8 @@ import '../styles/login.css'
 import '../styles/height.css'
 import { NavLink } from 'react-router-dom'
 import Loader from './Loader'
-const Login = () => {
-     const {submit,ErrorLogin,register,handleSubmit,errors,notCredential,load} = useLogin()
+const Login = ({addToCard}) => {
+     const {submit,ErrorLogin,register,handleSubmit,errors,notCredential,load} = useLogin({addToCard})
   return (
     <div className="conten-height flex flex-col justify-center items-center">
     {

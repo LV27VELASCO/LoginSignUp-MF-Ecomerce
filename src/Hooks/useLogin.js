@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import {useNavigate} from 'react-router-dom';
 import axios from "axios"
 
-const useLogin = () => {
+const useLogin = ({addToCard}) => {
     const { handleSubmit, register, reset, formState: { errors } } = useForm()
     const [ErrorLogin, setErrorLogin] = useState(false)
     const [notCredential, setNotCredential] = useState(false);
@@ -18,6 +18,7 @@ const useLogin = () => {
         .then(({data})=>{
             localStorage.setItem("token",data.token)
             localStorage.setItem("dataUser",JSON.stringify(data.user))
+            addToCard()
             navigate('/')
         })
         .catch(err=>{
